@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Problema do "Falar" - Guia Rápido</title>
+    <!-- Usa a fonte Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #f3f4f6; /* cinza claro */
+            background-color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .card {
+            background-color: #262626;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            color: #4CAF50; /* verde vibrante */
+        }
+        .highlight {
+            color: #87CEFA; /* azul claro */
+        }
+        .mistake {
+            color: #EF4444; /* vermelho */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #4B5563; /* cinza escuro */
+        }
+        th {
+            background-color: #1a1a1a;
+            color: #87CEFA;
+            font-weight: 600;
+        }
+        .draggable-word {
+            cursor: grab;
+            user-select: none;
+            display: inline-block;
+            background-color: #87CEFA;
+            color: #1a1a1a;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+        .draggable-word:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+        }
+        .drop-target {
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            border-bottom: 2px dashed #4CAF50;
+            background-color: #2d2d2d;
+            border-radius: 4px;
+            position: relative;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <div class="container mx-auto px-4 py-12">
+
+        <!-- Título principal -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold section-title">O Problema do "Falar" em Inglês 🗣️</h1>
+            <p class="mt-2 text-xl text-gray-400">Um guia rápido e prático para brasileiros</p>
+        </header>
+
+        <!-- Seções dos verbos -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Os Verbos e Suas Funções</h2>
+            <div class="space-y-6">
+                <!-- SPEAK -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-2 section-title">1. SPEAK 🗣️</h3>
+                    <p class="text-gray-300">
+                        <span class="font-bold highlight">É o verbo da formalidade e da comunicação unilateral.</span> Use-o para falar sobre idiomas, dar palestras, ou em situações mais sérias e profissionais. A ênfase está na **ação** de produzir sons com a voz.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400">
+                        <li><span class="font-semibold">I speak English.</span> (Eu falo inglês.) - <span class="text-gray-500">O foco está na habilidade de falar o idioma.</span></li>
+                        <li><span class="font-semibold">The CEO will speak at the event.</span> (O CEO vai falar no evento.) - <span class="text-gray-500">Comunicação unilateral: ele fala, a audiência ouve.</span></li>
+                        <li><span class="font-semibold">Can I speak to you for a moment?</span> (Posso falar com você por um momento?) - <span class="text-gray-500">Uso formal e direto.</span></li>
+                    </ul>
+                </div>
+
+                <!-- TALK -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-2 section-title">2. TALK 💬</h3>
+                    <p class="text-gray-300">
+                        <span class="font-bold highlight">É o verbo da conversa casual e do diálogo.</span> Perfeito para trocar ideias com amigos, família ou colegas de trabalho de forma descontraída. É o oposto de "speak" em termos de formalidade e sugere uma comunicação de **duas vias**.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400">
+                        <li><span class="font-semibold">We talked about the project.</span> (Nós conversamos sobre o projeto.) - <span class="text-gray-500">Indica uma conversa, uma troca de ideias.</span></li>
+                        <li><span class="font-semibold">Can we talk later?</span> (Podemos conversar depois?) - <span class="text-gray-500">Sugere um bate-papo, não uma palestra.</span></li>
+                        <li><span class="font-semibold">I need to talk to my kids.</span> (Preciso conversar com meus filhos.) - <span class="text-gray-500">Comunicação casual e pessoal.</span></li>
+                    </ul>
+                </div>
+
+                <!-- SAY -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-2 section-title">3. SAY 📢</h3>
+                    <p class="text-gray-300">
+                        <span class="font-bold highlight">É sobre o conteúdo da fala, o que foi dito.</span> Pense nele como a transcrição do que foi falado, sem muita preocupação com o interlocutor. Ele foca na **mensagem**.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400">
+                        <li><span class="font-semibold">He said he was tired.</span> (Ele disse que estava cansado.) - <span class="text-gray-500">A mensagem é "estava cansado".</span></li>
+                        <li><span class="font-semibold">What did she say?</span> (O que ela disse?) - <span class="text-gray-500">A pergunta é sobre o conteúdo da fala dela.</span></li>
+                        <li><span class="font-semibold">She said, "I love you."</span> (Ela disse, "Eu te amo.") - <span class="text-gray-500">Ideal para citar falas.</span></li>
+                    </ul>
+                </div>
+
+                <!-- TELL -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-2 section-title">4. TELL ✍️</h3>
+                    <p class="text-gray-300">
+                        <span class="font-bold highlight">É sobre a ação de contar ou informar algo a alguém.</span> Diferente de "say", o verbo **`tell`** sempre precisa de um **objeto direto** (a pessoa que recebe a informação).
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400">
+                        <li><span class="font-semibold">She told me the truth.</span> (Ela me contou a verdade.) - <span class="text-gray-500">O objeto é "me" (eu).</span></li>
+                        <li><span class="font-semibold">Tell your manager about the problem.</span> (Conte ao seu gerente sobre o problema.) - <span class="text-gray-500">O objeto é "your manager" (seu gerente).</span></li>
+                        <li><span class="font-semibold">Can you tell me a story?</span> (Você pode me contar uma história?) - <span class="text-gray-500">Foca em quem está recebendo a informação.</span></li>
+                    </ul>
+                </div>
+
+                <!-- CONVERSE -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-2 section-title">5. CONVERSE 🧐</h3>
+                    <p class="text-gray-300">
+                        <span class="font-bold highlight">Este é o "super-formal" do grupo.</span> Raramente usado na fala do dia a dia, ele é mais comum em contextos acadêmicos, diplomáticos ou quando a intenção é soar extremamente educado e ponderado.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400">
+                        <li><span class="font-semibold">The professors conversed about philosophy.</span> (Os professores conversaram sobre filosofia.) - <span class="text-gray-500">Uso acadêmico.</span></li>
+                        <li><span class="font-semibold">The two leaders were seen conversing privately.</span> (Os dois líderes foram vistos conversando em particular.) - <span class="text-gray-500">Uso diplomático/formal.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Say vs. Tell -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">⚖️ Say vs. Tell: A Regra de Ouro</h2>
+            <div class="card text-lg">
+                <p class="mb-4">
+                    Essa é a principal fonte de confusão! Lembre-se desta regra para nunca mais errar:
+                </p>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="w-full md:w-1/2">
+                        <h4 class="text-2xl font-bold mb-2 highlight">SAY</h4>
+                        <p class="mb-2">Foca na **mensagem**. Quase sempre precisa do **`to`** para indicar a pessoa, se for mencionada.</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-400 space-y-2">
+                            <li><span class="font-bold">What did she say?</span> (O que ela disse?)</li>
+                            <li><span class="font-bold">She said she was tired.</span> (Ela disse que estava cansada.)</li>
+                            <li><span class="font-bold">She said <span class="highlight">to me</span> that she was tired.</span> (Ela disse para mim que estava cansada.)</li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <h4 class="text-2xl font-bold mb-2 highlight">TELL</h4>
+                        <p class="mb-2">Foca no **receptor**. Sempre precisa de um **objeto direto** (a pessoa).</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-400 space-y-2">
+                            <li><span class="font-bold">What did she tell <span class="highlight">you</span>?</span> (O que ela te disse?)</li>
+                            <li><span class="font-bold">She told <span class="highlight">me</span> she was tired.</span> (Ela me disse que estava cansada.)</li>
+                            <li><span class="font-bold">She told <span class="highlight">him</span> a story.</span> (Ela contou uma história para ele.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collocations -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">💡 Collocations (Combinações Comuns)</h2>
+            <div class="card space-y-4 text-lg">
+                <p>
+                    Aprender essas combinações fixas vai te ajudar a soar mais natural.
+                </p>
+                <ul class="list-disc list-inside mt-4 text-gray-400 space-y-2">
+                    <li><span class="font-bold highlight">speak your mind</span> (dizer o que pensa)</li>
+                    <li><span class="font-bold highlight">talk back</span> (responder de forma insolente)</li>
+                    <li><span class="font-bold highlight">say a word</span> (dizer uma palavra, geralmente em frases negativas)</li>
+                    <li><span class="font-bold highlight">tell a joke</span> (contar uma piada)</li>
+                    <li><span class="font-bold highlight">tell a story</span> (contar uma história)</li>
+                    <li><span class="font-bold highlight">tell a lie / the truth</span> (contar uma mentira / a verdade)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Exemplos Rápidos -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">🎯 Exemplos Rápidos</h2>
+            <div class="card">
+                <p class="text-lg mb-4">
+                    <span class="font-bold">Português:</span> Ontem <span class="highlight">falei</span> com meu chefe. Ele <span class="highlight">falou</span> que vai atrasar. Eu <span class="highlight">falei</span> a verdade pra ele.
+                </p>
+                <p class="text-lg">
+                    <span class="font-bold section-title">Inglês correto:</span>
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-400">
+                    <li>I <span class="highlight font-semibold">talked</span> to my boss yesterday. (conversar)</li>
+                    <li>He <span class="highlight font-semibold">said</span> the project will be delayed. (conteúdo)</li>
+                    <li>I <span class="highlight font-semibold">told</span> him the truth. (contar para alguém)</li>
+                </ul>
+            </div>
+
+            <div class="card mt-6">
+                <p class="text-lg mb-4">
+                    <span class="font-bold">Português:</span> Precisamos <span class="highlight">falar</span> sobre o novo projeto. O que a Maria <span class="highlight">falou</span> sobre isso?
+                </p>
+                <p class="text-lg">
+                    <span class="font-bold section-title">Inglês correto:</span>
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-400">
+                    <li>We need to <span class="highlight font-semibold">talk</span> about the new project. (conversar/discutir um assunto)</li>
+                    <li>What did Maria <span class="highlight font-semibold">say</span> about it? (conteúdo da fala)</li>
+                </ul>
+            </div>
+
+            <div class="card mt-6">
+                <p class="text-lg mb-4">
+                    <span class="font-bold">Português:</span> Ela me <span class="highlight">falou</span> que não pode vir. Eu <span class="highlight">falei</span> a mesma coisa para o João.
+                </p>
+                <p class="text-lg">
+                    <span class="font-bold section-title">Inglês correto:</span>
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-400">
+                    <li>She <span class="highlight font-semibold">told</span> me she can't come. (contar para alguém)</li>
+                    <li>I <span class="highlight font-semibold">told</span> John the same thing. (contar para alguém)</li>
+                </ul>
+            </div>
+
+            <div class="card mt-6">
+                <p class="text-lg mb-4">
+                    <span class="font-bold">Português:</span> O professor me <span class="highlight">falou</span> para estudar mais. Ele <span class="highlight">fala</span> que a disciplina é difícil.
+                </p>
+                <p class="text-lg">
+                    <span class="font-bold section-title">Inglês correto:</span>
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-400">
+                    <li>The teacher <span class="highlight font-semibold">told</span> me to study more. (instrução/comando)</li>
+                    <li>He <span class="highlight font-semibold">says</span> the subject is difficult. (conteúdo da fala/opinião)</li>
+                </ul>
+            </div>
+
+            <div class="card mt-6">
+                <p class="text-lg mb-4">
+                    <span class="font-bold">Português:</span> As pessoas <span class="highlight">falam</span> que o filme é bom. <span class="highlight">Fale</span> sobre seus hobbies.
+                </p>
+                <p class="text-lg">
+                    <span class="font-bold section-title">Inglês correto:</span>
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-400">
+                    <li>People <span class="highlight font-semibold">say</span> the movie is good. (opinião geral/rumor)</li>
+                    <li><span class="highlight font-semibold">Tell</span> me about your hobbies. (contar detalhes para alguém)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tabelas de Conjugação -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">📚 Tabelas de Conjugação</h2>
+            <div class="space-y-8">
+                <!-- SPEAK Conjugation -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 section-title">Speak</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tempo Verbal</th>
+                                <th>Forma</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td>Presente Simples</td>
+                                <td>I/You/We/They speak<br>He/She/It speaks</td>
+                            </tr>
+                            <tr>
+                                <td>Passado Simples</td>
+                                <td>spoke</td>
+                            </tr>
+                            <tr>
+                                <td>Futuro Simples</td>
+                                <td>will speak</td>
+                            </tr>
+                            <tr>
+                                <td>Com Verbos Modais</td>
+                                <td>can/could/should/must speak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TALK Conjugation -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 section-title">Talk</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tempo Verbal</th>
+                                <th>Forma</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td>Presente Simples</td>
+                                <td>I/You/We/They talk<br>He/She/It talks</td>
+                            </tr>
+                            <tr>
+                                <td>Passado Simples</td>
+                                <td>talked</td>
+                            </tr>
+                            <tr>
+                                <td>Futuro Simples</td>
+                                <td>will talk</td>
+                            </tr>
+                            <tr>
+                                <td>Com Verbos Modais</td>
+                                <td>can/could/should/must talk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- SAY Conjugation -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 section-title">Say</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tempo Verbal</th>
+                                <th>Forma</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td>Presente Simples</td>
+                                <td>I/You/We/They say<br>He/She/It says</td>
+                            </tr>
+                            <tr>
+                                <td>Passado Simples</td>
+                                <td>said</td>
+                            </tr>
+                            <tr>
+                                <td>Futuro Simples</td>
+                                <td>will say</td>
+                            </tr>
+                            <tr>
+                                <td>Com Verbos Modais</td>
+                                <td>can/could/should/must say</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TELL Conjugation -->
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 section-title">Tell</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tempo Verbal</th>
+                                <th>Forma</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td>Presente Simples</td>
+                                <td>I/You/We/They tell<br>He/She/It tells</td>
+                            </tr>
+                            <tr>
+                                <td>Passado Simples</td>
+                                <td>told</td>
+                            </tr>
+                            <tr>
+                                <td>Futuro Simples</td>
+                                <td>will tell</td>
+                            </tr>
+                            <tr>
+                                <td>Com Verbos Modais</td>
+                                <td>can/could/should/must tell</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercício -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Prática Rápida 📝</h2>
+            <p class="text-lg text-center mb-6 text-gray-300">
+                Complete as frases com a forma correta de <span class="font-bold highlight">speak</span>, <span class="font-bold highlight">talk</span>, <span class="font-bold highlight">say</span> ou <span class="font-bold highlight">tell</span>.
+            </p>
+            <div class="card">
+                <div id="exercise-container" class="space-y-6">
+                    <!-- Exercícios gerados pelo JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Tradução -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Tradução: Português para Inglês 📚</h2>
+            <p class="text-lg text-center mb-6 text-gray-300">
+                Traduza as frases abaixo, usando a forma correta dos verbos.
+            </p>
+            <div class="card">
+                <div id="translation-container" class="space-y-6">
+                    <!-- Exercícios de tradução gerados pelo JS -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="check-translations-btn" class="bg-section-title text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg hover:bg-green-600 transition duration-200">
+                        Verificar Traduções
+                    </button>
+                </div>
+                <div id="translation-feedback-container" class="mt-6 text-center text-lg font-bold"></div>
+            </div>
+        </section>
+
+        <!-- Seção de Arrastar e Soltar -->
+        <hr class="border-gray-700 my-12" />
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Arrastar e Soltar 🖱️</h2>
+            <p class="text-lg text-center mb-6 text-gray-300">
+                Arraste a palavra correta para cada espaço em branco.
+            </p>
+            <div class="card">
+                <div id="word-bank" class="flex flex-wrap justify-center gap-4 mb-8">
+                    <div class="draggable-word" draggable="true">speak</div>
+                    <div class="draggable-word" draggable="true">talk</div>
+                    <div class="draggable-word" draggable="true">say</div>
+                    <div class="draggable-word" draggable="true">tell</div>
+                    <div class="draggable-word" draggable="true">spoke</div>
+                    <div class="draggable-word" draggable="true">told</div>
+                    <div class="draggable-word" draggable="true">said</div>
+                </div>
+
+                <div id="drag-and-drop-container" class="space-y-6">
+                    <!-- Exercícios de arrastar e soltar gerados pelo JS -->
+                </div>
+                <div class="mt-8 text-center">
+                    <button id="check-drag-drop" class="bg-section-title text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg hover:bg-green-600 transition duration-200">
+                        Verificar Arrastar e Soltar
+                    </button>
+                </div>
+                <div id="drag-drop-feedback-container" class="mt-6 text-center text-lg font-bold"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <p>&copy; 2024 Daby</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica para os exercícios de "Fill in the Blanks" com botão por frase
+            const exerciseContainer = document.getElementById('exercise-container');
+
+            const exercises = [
+                { question: "Can you ___ me your name?", answer: "tell" },
+                { question: "She ___ he was busy.", answer: "said" },
+                { question: "I need to ___ to you about something important.", answer: "talk" },
+                { question: "The baby is starting to ___.", answer: "speak" },
+                { question: "What did you ___ to him?", answer: "say" },
+                // 10 Novos Exercícios Avançados
+                { question: "The company's mission statement ___ a lot about its values.", answer: "says" },
+                { question: "He's known for ___ down to his subordinates.", answer: "talking" },
+                { question: "The government will not ___ to terrorists.", answer: "speak" },
+                { question: "I didn't mean to ___ you off, but I have a pressing deadline.", answer: "cut off" },
+                { question: "Her words were so eloquent, she could easily ___ her mind in any debate.", answer: "speak" },
+                { question: "It's difficult to ___ sense into him when he's so emotional.", answer: "talk" },
+                { question: "Could you ___ a word for me with the manager about my request?", answer: "put in" },
+                { question: "He tends to ___ about the same few topics constantly.", answer: "talk" },
+                { question: "After a moment of contemplation, she ___ the two words he had been waiting for: 'I do.'", answer: "said" },
+                { question: "I feel like I'm ___ to a wall; you're not listening to a word I'm saying.", answer: "talking" }
+            ];
+
+            function renderExercises() {
+                exerciseContainer.innerHTML = '';
+                exercises.forEach((exercise, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4 mb-4';
+                    const parts = exercise.question.split('___');
+                    div.innerHTML = `
+                        <p class="text-lg w-full md:w-auto">${index + 1}. ${parts[0]}</p>
+                        <input type="text" data-answer="${exercise.answer}" class="w-full md:w-1/3 p-2 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-highlight" placeholder="Digite aqui">
+                        <p class="text-lg w-full md:w-auto mt-2 md:mt-0">${parts[1]}</p>
+                        <button class="check-individual-btn bg-section-title text-gray-900 font-bold py-2 px-4 rounded-md shadow-lg hover:bg-green-600 transition duration-200 mt-2 md:mt-0">
+                            Verificar
+                        </button>
+                        <span class="feedback-icon text-2xl ml-2"></span>
+                    `;
+                    exerciseContainer.appendChild(div);
+                });
+            }
+
+            exerciseContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('check-individual-btn')) {
+                    const parentDiv = e.target.closest('div');
+                    const input = parentDiv.querySelector('input');
+                    const feedbackIcon = parentDiv.querySelector('.feedback-icon');
+                    const userAnswer = input.value.trim().toLowerCase();
+                    const correctAnswer = input.dataset.answer.toLowerCase();
+
+                    if (userAnswer === correctAnswer) {
+                        feedbackIcon.textContent = '✅';
+                        input.classList.remove('ring-red-500');
+                        input.classList.add('ring-green-500', 'ring-2');
+                    } else {
+                        feedbackIcon.textContent = '❌';
+                        input.classList.remove('ring-green-500');
+                        input.classList.add('ring-red-500', 'ring-2');
+                    }
+                }
+            });
+
+            renderExercises();
+
+            // Lógica para os novos exercícios de Tradução
+            const translationContainer = document.getElementById('translation-container');
+            const checkTranslationsBtn = document.getElementById('check-translations-btn');
+            const translationFeedbackContainer = document.getElementById('translation-feedback-container');
+
+            const translationExercises = [
+                { question: "Eu preciso falar com você sobre o projeto.", answer: "I need to talk to you about the project." },
+                { question: "O que ele te disse?", answer: "What did he tell you?" },
+                { question: "Ela fala três idiomas.", answer: "She speaks three languages." },
+                { question: "Eles disseram que não podiam vir.", answer: "They said they couldn't come." },
+                { question: "Ele me contou uma história engraçada.", answer: "He told me a funny story." },
+                { question: "Você pode falar mais devagar, por favor?", answer: "Can you speak more slowly, please?" },
+                { question: "Nós conversamos a noite toda sobre a vida.", answer: "We talked all night about life." },
+                { question: "Não diga isso na frente das crianças.", answer: "Don't say that in front of the kids." },
+                { question: "Fale sobre sua experiência profissional.", answer: "Tell me about your professional experience." },
+                { question: "A Maria me disse que estava cansada.", answer: "Maria told me she was tired." }
+            ];
+
+            function renderTranslations() {
+                translationContainer.innerHTML = '';
+                translationExercises.forEach((exercise, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex flex-col sm:flex-row items-start sm:items-center sm:space-x-4';
+                    div.innerHTML = `
+                        <p class="text-lg mb-2 sm:mb-0 w-full sm:w-1/3 font-bold text-highlight">${index + 1}. ${exercise.question}</p>
+                        <input type="text" data-answer="${exercise.answer.toLowerCase()}" class="w-full sm:w-2/3 p-2 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-highlight" placeholder="Sua tradução aqui...">
+                    `;
+                    translationContainer.appendChild(div);
+                });
+            }
+
+            function checkTranslations() {
+                const inputs = translationContainer.querySelectorAll('input');
+                let allCorrect = true;
+                inputs.forEach(input => {
+                    // Limpa e normaliza a resposta do usuário
+                    const userAnswer = input.value.trim().toLowerCase().replace(/[.,!?']+/g, '');
+                    // Limpa e normaliza a resposta correta para uma comparação mais flexível
+                    const correctAnswer = input.dataset.answer.trim().toLowerCase().replace(/[.,!?']+/g, '');
+
+                    if (userAnswer === correctAnswer) {
+                        input.classList.remove('ring-red-500', 'ring-2');
+                        input.classList.add('ring-green-500', 'ring-2');
+                    } else {
+                        input.classList.remove('ring-green-500', 'ring-2');
+                        input.classList.add('ring-red-500', 'ring-2');
+                        allCorrect = false;
+                    }
+                });
+
+                if (allCorrect) {
+                    translationFeedbackContainer.innerHTML = `<p class="text-green-400">🎉 Parabéns! Todas as suas traduções estão corretas!</p>`;
+                } else {
+                    translationFeedbackContainer.innerHTML = `<p class="text-red-400">😕 Tente novamente! Algumas traduções precisam ser ajustadas.</p>`;
+                }
+            }
+
+            checkTranslationsBtn.addEventListener('click', checkTranslations);
+            renderTranslations();
+
+            // Lógica para os novos exercícios de Arrastar e Soltar
+            const dragAndDropContainer = document.getElementById('drag-and-drop-container');
+            const checkDragDropBtn = document.getElementById('check-drag-drop');
+            const dragDropFeedbackContainer = document.getElementById('drag-drop-feedback-container');
+
+            const dragAndDropExercises = [
+                { id: 1, question: "The politician will ___ at the conference tomorrow.", answer: "speak" },
+                { id: 2, question: "We need to ___ about the sales figures.", answer: "talk" },
+                { id: 3, question: "He always ___ that the customer is right.", answer: "says" },
+                { id: 4, question: "I can ___ you the address of the restaurant.", answer: "tell" },
+                { id: 5, question: "Can you ___ French?", answer: "speak" },
+                { id: 6, question: "She ___ me the whole story.", answer: "told" },
+                { id: 7, question: "What did you ___ when he left?", answer: "say" },
+                { id: 8, question: "Let's ___ this out after the meeting.", answer: "talk" },
+                { id: 9, question: "Actions ___ louder than words.", answer: "speak" },
+                { id: 10, question: "Please ___ the students to be quiet.", answer: "tell" },
+            ];
+
+            function renderDragAndDrop() {
+                dragAndDropContainer.innerHTML = '';
+                dragAndDropExercises.forEach((exercise, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex flex-col sm:flex-row items-center sm:space-x-2 text-lg';
+                    const parts = exercise.question.split('___');
+                    div.innerHTML = `
+                        <p class="mb-2 sm:mb-0">${index + 1}. ${parts[0]}</p>
+                        <div class="drop-target flex-grow" data-correct-answer="${exercise.answer}" data-question-id="${exercise.id}"
+                            ondragover="event.preventDefault();" ondrop="handleDrop(event)"></div>
+                        <p class="mt-2 sm:mt-0">${parts[1]}</p>
+                    `;
+                    dragAndDropContainer.appendChild(div);
+                });
+            }
+
+            // Variável para armazenar o ID do elemento arrastado
+            let draggedItem = null;
+
+            // Lógica de arrastar
+            document.querySelectorAll('.draggable-word').forEach(word => {
+                word.addEventListener('dragstart', (e) => {
+                    draggedItem = e.target.textContent.trim();
+                    e.dataTransfer.setData('text/plain', draggedItem);
+                    // Criar um clone visual para o drag
+                    e.dataTransfer.setDragImage(e.target, 0, 0);
+                });
+            });
+
+            window.handleDrop = (e) => {
+                e.preventDefault();
+                const droppedWord = e.dataTransfer.getData('text/plain');
+                const dropTarget = e.target.closest('.drop-target');
+
+                if (dropTarget) {
+                    dropTarget.textContent = droppedWord;
+                    dropTarget.style.backgroundColor = '#4B5563'; // cinza escuro
+                    dropTarget.style.color = '#fff';
+                    dropTarget.dataset.droppedAnswer = droppedWord;
+                }
+            };
+
+            checkDragDropBtn.addEventListener('click', () => {
+                let allCorrect = true;
+                dragAndDropContainer.querySelectorAll('.drop-target').forEach(target => {
+                    const droppedAnswer = target.dataset.droppedAnswer ? target.dataset.droppedAnswer.toLowerCase() : '';
+                    const correctAnswer = target.dataset.correctAnswer.toLowerCase();
+
+                    if (droppedAnswer === correctAnswer) {
+                        target.style.borderBottom = '2px solid #4CAF50';
+                        target.style.color = '#4CAF50';
+                    } else {
+                        target.style.borderBottom = '2px solid #EF4444';
+                        target.style.color = '#EF4444';
+                        allCorrect = false;
+                    }
+                });
+
+                if (allCorrect) {
+                    dragDropFeedbackContainer.innerHTML = `<p class="text-green-400">🎉 Uau! Todas as suas respostas de arrastar e soltar estão corretas!</p>`;
+                } else {
+                    dragDropFeedbackContainer.innerHTML = `<p class="text-red-400">😕 Algumas respostas estão incorretas. Tente novamente!</p>`;
+                }
+            });
+
+            renderDragAndDrop();
+        });
+    </script>
+</body>
+</html>
